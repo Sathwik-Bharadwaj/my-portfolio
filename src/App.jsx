@@ -8,6 +8,7 @@ import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import Projects from "./pages/Projects";
 import Photography from "./pages/Photography";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/experience" element={<Experience />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/photography" element={<Photography />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
