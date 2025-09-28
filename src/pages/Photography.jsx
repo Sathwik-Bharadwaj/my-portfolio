@@ -215,7 +215,7 @@ const Photography = () => {
     "All",
     "Landscape",
     "Urban Photography",
-    "Street",
+    "Street Photography",
     "Nature",
     "Sports",
     "Food & Lifestyle",
@@ -323,10 +323,6 @@ const Photography = () => {
                     <div className="space-y-2 text-xs text-gray-500">
                       <div className="flex justify-between items-center">
                         <span className="flex items-center gap-1">
-                          <Calendar className="w-3 h-3" />
-                          {photo.date}
-                        </span>
-                        <span className="flex items-center gap-1">
                           <MapPin className="w-3 h-3" />
                           {photo.location}
                         </span>
@@ -334,12 +330,6 @@ const Photography = () => {
                       <div className="flex justify-between">
                         <span>📷 {photo.camera}</span>
                         <span>🔍 {photo.lens}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="flex items-center gap-1">
-                          <Settings className="w-3 h-3" />
-                          {photo.settings}
-                        </span>
                       </div>
                     </div>
                   </div>
