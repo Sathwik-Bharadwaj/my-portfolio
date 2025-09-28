@@ -281,8 +281,6 @@ const Contact = () => {
                   <option value="">Select an option</option>
                   <option value="LinkedIn">LinkedIn</option>
                   <option value="GitHub">GitHub</option>
-                  <option value="Google Search">Google Search</option>
-                  <option value="Referral">Referral</option>
                   <option value="Portfolio Website">Portfolio Website</option>
                   <option value="Other">Other</option>
                 </select>
