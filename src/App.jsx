@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/about";
+import Education from "./pages/Education";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/education" element={<Education />} />
         </Routes>
         <Footer />
       </div>
