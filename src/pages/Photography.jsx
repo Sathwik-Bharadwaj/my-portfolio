@@ -289,7 +289,13 @@ const Photography = () => {
                           onClick={() => openImageViewer(photo)}
                           className="bg-white rounded-full p-3 hover:bg-gray-100 transition-colors"
                         >
-                          <Eye className="w-6 h-6 text-gray-700" />
+                          <a
+                            href={photo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Eye className="w-5 h-5 text-gray-700" />
+                          </a>
                         </button>
                       </div>
                     </div>
