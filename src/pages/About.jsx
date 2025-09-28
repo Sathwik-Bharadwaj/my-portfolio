@@ -92,7 +92,7 @@ const About = () => {
                 testing, and used Selenium for test automation. I also built a
                 Python script to automate permission setups and send reports
                 once access was granted. My contributions earned me the
-                Accenture Ace Award for achieving key project milestones.
+                Accenture Bravo Award for achieving key project milestones.
               </p>
               <p>
                 Even while working in QA, I knew I wanted to move toward a
