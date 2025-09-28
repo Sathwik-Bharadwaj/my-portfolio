@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Download, ArrowRight } from "lucide-react";
+import { Eye, Download, ArrowRight } from "lucide-react";
+import profilePic from "../assets/me.png";
+import resume from "../assets/Sathwik_Resume_September_2025.pdf";
 
 const Home = () => {
   return (
@@ -19,10 +21,22 @@ const Home = () => {
               optimization and quality improvement in Agile environments.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 flex items-center gap-2 transition-colors">
+              <a
+                href={resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 flex items-center gap-2 transition-colors"
+              >
+                <Eye className="w-5 h-5" />
+                View Resume
+              </a>
+              <a
+                href={resume}
+                download="Sathwik_Resume.pdf"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 flex items-center gap-2 transition-colors"
+              >
                 <Download className="w-5 h-5" />
-                Download Resume
-              </button>
+              </a>
               <Link
                 to="/contact"
                 className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center gap-2"
@@ -44,8 +58,12 @@ const Home = () => {
             </div>
           </div>
           <div className="md:w-1/3">
-            <div className="w-64 h-64 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mx-auto flex items-center justify-center">
-              <span className="text-white text-6xl font-bold">YN</span>
+            <div className="w-64 h-64 rounded-full mx-auto flex items-center justify-center overflow-hidden">
+              <img
+                src={profilePic}
+                alt="profile"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
