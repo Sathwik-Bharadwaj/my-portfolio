@@ -241,9 +241,9 @@ const Photography = () => {
             Photography
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            When I'm not coding, I love capturing the diverse beauty of India
-            through my lens. Photography teaches me to see the world differently
-            and appreciate the beauty in everyday moments.
+            When I'm not coding, I love capturing moments. Photography teaches
+            me to see the world differently and appreciate the beauty in
+            everyday moments.
           </p>
         </div>
 
