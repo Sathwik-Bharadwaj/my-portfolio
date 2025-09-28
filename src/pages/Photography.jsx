@@ -269,69 +269,143 @@ const Photography = () => {
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Featured Gallery
           </h2>
-          <ScrollableCards
-            items={filteredPhotos}
-            current={currentPhoto}
-            setCurrent={setCurrentPhoto}
-            itemsPerView={3}
-            renderCard={(photo) => (
-              <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="relative">
-                  <img
-                    src={photo.url}
-                    alt={photo.alt}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-3">
-                      <button className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
-                        <a
-                          href={photo.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+          <div className="block sm:hidden">
+            <ScrollableCards
+              items={filteredPhotos}
+              current={currentPhoto}
+              setCurrent={setCurrentPhoto}
+              itemsPerView={1}
+              renderCard={(photo) => (
+                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                  <div className="relative">
+                    <img
+                      src={photo.url}
+                      alt={photo.alt}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button
+                          onClick={() => openImageViewer(photo)}
+                          className="bg-white rounded-full p-3 hover:bg-gray-100 transition-colors"
                         >
-                          <Eye className="w-5 h-5 text-gray-700" />
-                        </a>
-                      </button>
+                          <Eye className="w-6 h-6 text-gray-700" />
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div className="absolute top-3 left-3">
-                    <span className="bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs font-medium">
-                      {photo.category}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-3 right-3">
-                    <span className="bg-white bg-opacity-90 text-gray-800 px-2 py-1 rounded text-xs flex items-center gap-1">
-                      <MapPin className="w-3 h-3" />
-                      {photo.location.split(",")[0]}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
-                    {photo.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                    {photo.description}
-                  </p>
-
-                  <div className="space-y-2 text-xs text-gray-500">
-                    <div className="flex justify-between items-center">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3" />
-                        {photo.location}
+                    <div className="absolute top-3 left-3">
+                      <span className="bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs font-medium">
+                        {photo.category}
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>📷 {photo.camera}</span>
-                      <span>🔍 {photo.lens}</span>
+                    <div className="absolute bottom-3 right-3">
+                      <span className="bg-white bg-opacity-90 text-gray-800 px-2 py-1 rounded text-xs flex items-center gap-1">
+                        <MapPin className="w-3 h-3" />
+                        {photo.location.split(",")[0]}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {photo.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                      {photo.description}
+                    </p>
+
+                    <div className="space-y-2 text-xs text-gray-500">
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {photo.date}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-3 h-3" />
+                          {photo.location}
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>📷 {photo.camera}</span>
+                        <span>🔍 {photo.lens}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="flex items-center gap-1">
+                          <Settings className="w-3 h-3" />
+                          {photo.settings}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
-          />
+              )}
+            />
+          </div>
+          <div className="hidden lg:block">
+            <ScrollableCards
+              items={filteredPhotos}
+              current={currentPhoto}
+              setCurrent={setCurrentPhoto}
+              itemsPerView={3}
+              renderCard={(photo) => (
+                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+                  <div className="relative">
+                    <img
+                      src={photo.url}
+                      alt={photo.alt}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-3">
+                        <button className="bg-white rounded-full p-2 hover:bg-gray-100 transition-colors">
+                          <a
+                            href={photo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <Eye className="w-5 h-5 text-gray-700" />
+                          </a>
+                        </button>
+                      </div>
+                    </div>
+                    <div className="absolute top-3 left-3">
+                      <span className="bg-black bg-opacity-70 text-white px-2 py-1 rounded text-xs font-medium">
+                        {photo.category}
+                      </span>
+                    </div>
+                    <div className="absolute bottom-3 right-3">
+                      <span className="bg-white bg-opacity-90 text-gray-800 px-2 py-1 rounded text-xs flex items-center gap-1">
+                        <MapPin className="w-3 h-3" />
+                        {photo.location.split(",")[0]}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-6">
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {photo.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                      {photo.description}
+                    </p>
+
+                    <div className="space-y-2 text-xs text-gray-500">
+                      <div className="flex justify-between items-center">
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-3 h-3" />
+                          {photo.location}
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>📷 {photo.camera}</span>
+                        <span>🔍 {photo.lens}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            />
+          </div>
         </div>
 
         {/* Photography Grid */}
