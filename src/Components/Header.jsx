@@ -49,7 +49,10 @@ const Header = () => {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800">
+            <a
+              href="https://github.com/Sathwik-Bharadwaj/"
+              className="text-gray-600 hover:text-gray-800"
+            >
               <Github className="w-6 h-6" />
             </a>
           </div>
