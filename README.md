@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website built with React, showcasing my professional experience, projects, hobby, and skills. Designed with a LinkedIn-inspired aesthetic and deployed on Vercel.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://www.sathwik.dev)
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://www.sath-wik.dev)
 [![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
