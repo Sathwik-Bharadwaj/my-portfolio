@@ -7,6 +7,24 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Personal Portfolio Website",
+      description:
+        "A personal portfolio website showcasing my projects and skills.",
+      tech: ["React", "Tailwind CSS", "Vite", "EmailJs", "Vercel"],
+      features: [
+        "Responsive design with Tailwind CSS",
+        "Interactive project showcase with detailed descriptions",
+        "Contact form integrated with EmailJs for direct communication",
+      ],
+      category: "Full Stack",
+      year: "2025",
+      status: "Completed",
+      image:
+        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1920",
+      link: "#",
+      github: "https://github.com/Sathwik-Bharadwaj/my-portfolio",
+    },
+    {
       title: "Gym Pose Detection",
       description:
         "A video-based gym pose classification system leveraging 3D CNNs and Time-based CNNs to recognize and evaluate workout movements with high accuracy.",
@@ -32,7 +50,7 @@ const Projects = () => {
       image:
         "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop",
       link: "#",
-      github: "#",
+      github: "https://github.com/Sathwik-Bharadwaj/GymPose-Estimation",
     },
     {
       title: "Automatic Quiz Generator",
@@ -61,7 +79,7 @@ const Projects = () => {
       image:
         "https://images.unsplash.com/photo-1606868306217-dbf5046868d2?w=500&h=300&fit=crop",
       link: "#",
-      github: "#",
+      github: "https://github.com/Sathwik-Bharadwaj/Automatic-QuizGenerator",
     },
     {
       title: "Berryjam Contest 2024",
@@ -90,7 +108,7 @@ const Projects = () => {
       image:
         "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop",
       link: "#",
-      github: "#",
+      github: "https://github.com/Sathwik-Bharadwaj/BerryJam",
     },
     {
       title: "Story Telling Using Lifelogging",
@@ -308,13 +326,32 @@ const Projects = () => {
                         <ExternalLink className="w-4 h-4" />
                         View Project
                       </a> */}
-                      <a
+                      {/* <a
                         href={project.github}
                         className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 flex items-center gap-2 transition-colors text-sm"
                       >
                         <Github className="w-4 h-4" />
                         Source Code
-                      </a>
+                      </a> */}
+                      {project.github === "#" ? (
+                        <button
+                          disabled
+                          className="border border-gray-300 text-gray-400 px-4 py-2 rounded-lg flex items-center gap-2 text-sm cursor-not-allowed bg-gray-100"
+                        >
+                          <Github className="w-4 h-4" />
+                          Private
+                        </button>
+                      ) : (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-50 flex items-center gap-2 transition-colors text-sm"
+                        >
+                          <Github className="w-4 h-4" />
+                          Source Code
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

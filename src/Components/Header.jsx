@@ -88,10 +88,16 @@ const Header = () => {
               </Link>
             ))}
             <div className="flex space-x-4 mt-4 px-4">
-              <a href="#" className="text-blue-600 hover:text-blue-800">
+              <a
+                href="https://www.linkedin.com/in/sathwik-bharadwaj/"
+                className="text-blue-600 hover:text-blue-800"
+              >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-600 hover:text-gray-800">
+              <a
+                href="https://github.com/Sathwik-Bharadwaj/"
+                className="text-gray-600 hover:text-gray-800"
+              >
                 <Github className="w-6 h-6" />
               </a>
             </div>
