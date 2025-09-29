@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Eye, Download, ArrowRight } from "lucide-react";
 import profilePic from "../assets/me.png";
-import resume from "../assets/Sathwik_Resume_September_2025.pdf";
+import resume from "../assets/Sathwik_Resume_October_2025.pdf";
 
 const Home = () => {
   return (
