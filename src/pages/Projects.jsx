@@ -7,6 +7,36 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "Sydney Rental Market Intelligence Platform",
+      description:
+        "An end-to-end data lakehouse on Databricks and AWS that ingests, cleans and models ~192K Sydney rental records, with an XGBoost model and an interactive Streamlit dashboard for exploring rental market trends.",
+      tech: [
+        "Databricks",
+        "AWS S3",
+        "PySpark",
+        "Delta Lake",
+        "MLflow",
+        "XGBoost",
+        "Streamlit",
+        "Python",
+      ],
+      features: [
+        "Built a medallion-style lakehouse (Bronze → Silver → Gold) on Databricks with Delta Lake",
+        "Stored raw and processed data in AWS S3 for scalable, low-cost storage",
+        "Processed and cleaned ~192K Sydney rental records using PySpark",
+        "Trained an XGBoost model achieving 73.7% accuracy on rental market predictions",
+        "Tracked experiments, parameters and model versions with MLflow",
+        "Delivered insights through an interactive Streamlit dashboard",
+      ],
+      category: "Data Engineering",
+      year: "2026",
+      status: "Completed",
+      image:
+        "https://images.unsplash.com/photo-1449844908441-8829872d2607?w=500&h=300&fit=crop",
+      link: "#",
+      github: "#",
+    },
+    {
       title: "Personal Portfolio Website",
       description:
         "A personal portfolio website showcasing my projects and skills.",
